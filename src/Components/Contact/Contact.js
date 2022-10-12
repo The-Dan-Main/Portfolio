@@ -33,7 +33,7 @@ export default function Contact() {
             .then(() => alert("Success!"))
             .catch(error => alert(error));
     
-          e.preventDefault();
+        //   e.preventDefault();
     }
 
     return (
