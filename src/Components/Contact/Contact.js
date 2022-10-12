@@ -32,7 +32,7 @@ export default function Contact() {
         fetch("/", {
             method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
-            body: encodeURI({ "form-name": "contact", ...data })
+            body: encodeURI({ "form-name": "contact-form", ...data })
           })
             .then(() => alert("Success!"))
             .catch(error => alert(error));
