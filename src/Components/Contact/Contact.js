@@ -25,7 +25,7 @@ export default function Contact() {
         const data = { name: name, email: email, type: type, message: message }
         console.log("submitted")
         console.log(data)
-        fetch("/", {
+        fetch("/contact", {
             method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
             body: data
