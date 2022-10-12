@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import './Contact.css'
 
@@ -8,6 +8,10 @@ export default function Contact() {
     const [email, setEmail] = useState("")
     const [type, setType] = useState("Blog")
     const [message, setMessage] = useState("")
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    },[])
 
     const reset = (e) => {
         e.preventDefault()
@@ -20,21 +24,21 @@ export default function Contact() {
 
 
 
-    const handleSubmit = (e) => {
-        e.preventDefault()
-        const data = { name: name, email: email, type: type, message: message }
-        console.log("submitted")
-        console.log(data)
-        fetch("/contact", {
-            method: "POST",
-            headers: { "Content-Type": "application/x-www-form-urlencoded" },
-            body: data
-          })
-            .then(() => alert("Success!"))
-            .catch(error => alert(error));
+    // const handleSubmit = (e) => {
+    //     e.preventDefault()
+    //     const data = { name: name, email: email, type: type, message: message }
+    //     console.log("submitted")
+    //     console.log(data)
+    //     fetch("/contact", {
+    //         method: "POST",
+    //         headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    //         body: data
+    //       })
+    //         .then(() => alert("Success!"))
+    //         .catch(error => alert(error));
     
-        //   e.preventDefault();
-    }
+    //     //   e.preventDefault();
+    // }
 
     return (
         <div className='contact-container'>
@@ -50,8 +54,8 @@ export default function Contact() {
                 method="POST"
                 data-netlify="true"
                 className="form-container"
-                action="/submissionDone.html"
-                onSubmit={(e) => handleSubmit(e)}
+                action="/"
+                // onSubmit={(e) => handleSubmit(e)}
                 netlify-honeypot="bot-field"
             >
                 <p className="hidden">

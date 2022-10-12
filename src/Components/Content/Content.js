@@ -1,7 +1,12 @@
+import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import './Content.css'
 
 export default function Content() {
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    },[])
 
     return (
         <div className='content-container'>
