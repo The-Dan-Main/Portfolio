@@ -53,7 +53,7 @@ export default function Contact() {
                 method="POST"
                 data-netlify="true"
                 className="form-container"
-                action="/"
+                // action="/"
                 onSubmit={handleSubmit}
                 netlify-honeypot="bot-field"
             >
