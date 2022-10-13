@@ -9,7 +9,7 @@ const encode = (data) => {
   class ContactForm extends React.Component {
     constructor(props) {
       super(props);
-      this.state = { name: "", email: "", message: "" };
+      this.state = { name: "", email: "", message: "", age: ""};
     }
 
     /* Here’s the juicy bit for posting the form submission */
@@ -29,7 +29,7 @@ const encode = (data) => {
     handleChange = e => this.setState({ [e.target.name]: e.target.value });
 
     render() {
-      const { name, email, message } = this.state;
+      const { name, email, message, age } = this.state;
       return (
         <form onSubmit={this.handleSubmit}>
           <p>
@@ -40,6 +40,11 @@ const encode = (data) => {
           <p>
             <label>
               Your Email: <input type="email" name="email" value={email} onChange={this.handleChange} />
+            </label>
+          </p>
+          <p>
+            <label>
+              Age: <textarea name="age" value={age} onChange={this.handleChange} />
             </label>
           </p>
           <p>
