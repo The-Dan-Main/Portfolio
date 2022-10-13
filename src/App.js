@@ -13,7 +13,7 @@ export default function App() {
 
   useEffect(() => {
     window.scrollTo(0, 0)
-    window.title = "Dan's Portfolio"
+    document.title = "Dan's Portfolio"
 }, [])
 
   return (
