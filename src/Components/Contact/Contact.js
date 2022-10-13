@@ -17,24 +17,22 @@ export default function Contact() {
         e.preventDefault()
         setName("")
         setEmail("")
-        setType("")
+        setType("Blog")
         setMessage("")
-
     }
 
 
 
     const handleSubmit = (e) => {
-        e.preventDefault()
         const data = { name: name, email: email, type: type, message: message }
-        console.log("submitted")
+        // console.log("submitted")
         console.log(data)
         fetch("/", {
             method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
             body: encodeURI({ "form-name": "contact-form", ...data })
           })
-            .then(() => alert("Success!"))
+            .then(res => console.log(res))
             .catch(error => alert(error));
           e.preventDefault();
     }
