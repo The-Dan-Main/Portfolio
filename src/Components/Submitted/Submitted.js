@@ -8,7 +8,7 @@ export default function Submitted() {
     
     useEffect(() => {
         window.scrollTo(0, 0)
-        window.title = "Successfully submitted!"
+        document.title = "Successfully submitted!"
         setTimeout(() => {
             navigate('/')
           }, 5000)

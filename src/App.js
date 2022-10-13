@@ -19,16 +19,12 @@ export default function App() {
   return (
     <div className="App">
       <BrowserRouter>
-
         <Routes>
           <Route path='/' element={<Content />} />
           <Route path='/contact' element={<ContactWithRouter />} />
           <Route path='/contact/submitted' element={<Submitted />} />
         </Routes>
       </BrowserRouter>
-
-
-
 
       <Footer />
     </div>

@@ -11,6 +11,7 @@ class ContactForm extends React.Component {
 
     componentDidMount() {
         window.scrollTo(0, 0)
+        document.title = "Contact Form"
     }
     
 
@@ -95,6 +96,7 @@ class ContactForm extends React.Component {
 
 
 export function ContactWithRouter(props) {
+    document.title = "Contact Form"
     const navigate = useNavigate()
     return (<ContactForm navigate={navigate} />)
 }
