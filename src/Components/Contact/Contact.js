@@ -47,7 +47,7 @@ export default function Contact() {
             <h3>Let me know what you need:</h3>
 
             <form
-                name="contact-form"
+                name="contact"
                 method="POST"
                 data-netlify="true"
                 className="form-container"
@@ -55,7 +55,7 @@ export default function Contact() {
                 onSubmit={handleSubmit}
                 netlify-honeypot="bot-field"
             >
-                <input type="hidden" name="form-name" value="contact-form" />
+                <input type="hidden" name="form-name" value="contact" />
                 <p className="hidden">
                     <label>
                         Dont fill this out if youre human: <input name="bot-field" />
