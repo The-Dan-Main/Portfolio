@@ -31,10 +31,10 @@ export default function Contact() {
             method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
             body: encodeURI({ "form-name": "contact-form", ...data })
-          })
+        })
             .then(res => console.log(res))
             .catch(error => alert(error));
-          e.preventDefault();
+        e.preventDefault();
     }
 
     return (
@@ -47,13 +47,13 @@ export default function Contact() {
             <h3>Let me know what you need:</h3>
 
             <form
-                name="contact"
-                method="POST"
-                data-netlify="true"
+                // name="contact"
+                // method="POST"
+                // data-netlify="true"
                 className="form-container"
                 // action="/"
                 onSubmit={handleSubmit}
-                netlify-honeypot="bot-field"
+            // netlify-honeypot="bot-field"
             >
                 <input type="hidden" name="form-name" value="contact" />
                 <p className="hidden">
