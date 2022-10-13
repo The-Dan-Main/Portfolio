@@ -17,7 +17,7 @@ class ContactForm extends React.Component {
     componentDidMount() {
         window.scrollTo(0, 0)
     }
-    /* Here’s the juicy bit for posting the form submission */
+    
 
     reset = (e) => {
         e.preventDefault()
@@ -38,9 +38,6 @@ class ContactForm extends React.Component {
     };
 
     handleChange = e => this.setState({ [e.target.name]: e.target.value });
-    // handleSelectChange = e => {
-    //     console.log(e.target.name)
-    //     this.setState({ [e.target.name]: e.target.value })};
 
     render() {
         const { name, email, message, type } = this.state;
@@ -68,7 +65,7 @@ class ContactForm extends React.Component {
                     </p>
                     <p>
                         <label>Type of Website:<br></br>
-                            <select required name="type" onChange={this.handleChange} value={type}>
+                            <select name="type" onChange={this.handleChange} value={type}>
                                 <option value="Inital">Please choose...</option>
                                 <option value="Blog">Blog</option>
                                 <option value="Info-Site">Info-Page</option>
