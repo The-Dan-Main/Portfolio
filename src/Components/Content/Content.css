@@ -169,6 +169,8 @@ a:hover {
     height: 30px;
     width: 30px;
     background-color: white;
+    color: #000;
+    counter-reset: none;
     border-radius: 15px;
     position: absolute;
     top: 25px;

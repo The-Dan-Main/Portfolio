@@ -1,12 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./ContactForm.css"
 
-const encode = (data) => {
-    return Object.keys(data)
-        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-        .join("&");
-}
 
 class ContactForm extends React.Component {
     constructor(props) {
@@ -19,22 +14,29 @@ class ContactForm extends React.Component {
     }
     
 
+    encode = (data) => {
+        return Object.keys(data)
+            .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+            .join("&");
+    }
+
     reset = (e) => {
         e.preventDefault()
-        this.setState({ name: "", email: "", message: "", age: "", type: "Blog" })
+        this.setState({ name: "", email: "", message: "", age: "", type: "" })
     }
 
     handleSubmit = e => {
-        console.log(this.state)
+
         fetch("/", {
             method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
-            body: encode({ "form-name": "contact", ...this.state })
+            body: this.encode({ "form-name": "contact", ...this.state })
         })
-            .then(() => console.log("Successfully submitted!"))
             .catch(error => alert(error));
 
+        this.props.navigate('/contact/submitted')
         e.preventDefault();
+        this.reset()
     };
 
     handleChange = e => this.setState({ [e.target.name]: e.target.value });
@@ -82,13 +84,19 @@ class ContactForm extends React.Component {
                     <label id="ready-title">Ready to send?</label>
                     <p id="button-section">
                         <button type="submit" >Send</button>
-                        <button type="reset" onClick={(e) => this.reset(e)}>Reset</button>
+                        <button type="reset" onClick={this.reset}>Reset</button>
                     </p>
                 </form>
 
             </div>
         );
     }
+}
+
+
+export function ContactWithRouter(props) {
+    const navigate = useNavigate()
+    return (<ContactForm navigate={navigate} />)
 }
 
 export default ContactForm
