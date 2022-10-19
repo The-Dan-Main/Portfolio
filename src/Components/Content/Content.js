@@ -6,7 +6,7 @@ export default function Content() {
 
     useEffect(() => {
         window.scrollTo(0, 0)
-    },[])
+    }, [])
 
     return (
         <div className='content-container'>
@@ -21,17 +21,37 @@ export default function Content() {
 
                 <a href="https://mysimple-calculator.netlify.app/" target="_blank" rel="noreferrer">
                     <div className="description-pointer">?</div>
-                    <span className="black-to-white-description">First project:<br></br>'A simple calculator, which I built from scratch'</span>
+                    <span className="black-to-white-description">
+                        <strong>
+                            First project:
+                        </strong>
+                        <br></br>
+                        'A simple calculator, which I built from scratch'
+                    </span>
                     <img src={require("./images/calculator.png")} alt="my first project - a simple calculator" id="img-calculator"></img>
                 </a>
+                
                 <a href="https://todoay-list.netlify.app/" target="_blank" className="white-container" rel="noreferrer">
                     <div className="description-pointer">?</div>
-                    <span className="white-to-black-description">Second project:<br></br>'A multi-page todo-list with filter functions'</span>
+                    <span className="white-to-black-description">
+                        <strong>
+                            Second project:
+                        </strong>
+                        <br></br>
+                        'A multi-page todo-list with filter functions'
+                    </span>
                     <img src={require("./images/Todo list.png")} alt="my second project - a to do list" id="img-todolist"></img>
                 </a>
+
                 <a href="https://quote-generator-c9.netlify.app/" target="_blank" className="white-container" id="quote" rel="noreferrer">
                     <div className="description-pointer">?</div>
-                    <span className="white-to-black-description">Second project:<br></br>'a quote generator with style settings'</span>
+                    <span className="white-to-black-description">
+                        <strong>
+                            Second project:
+                        </strong>
+                        <br></br>
+                        'a quote generator with style settings'
+                    </span>
                     <img src={require("./images/quoteGenerator.png")} alt="my third project - a quote generator" id="img-quote-generator"></img>
                 </a>
 
@@ -43,18 +63,39 @@ export default function Content() {
 
                     <a href="https://countries-of-the-world-dan.netlify.app/" target="_blank" className="black-container" id="country" rel="noreferrer">
                         <div className="description-pointer">?</div>
-                        <span className="black-to-white-description">Country Project:<br></br>'a simple ReactJS API interface to get infos about countries'</span>
+                        <span className="black-to-white-description">
+                            <strong>
+                                Country Project:
+                            </strong>
+                            <br></br>
+                            'a simple ReactJS API interface to get infos about countries'
+                        </span>
                         <img src={require("./images/country.png")} alt="coming soon" id="img-TBA"></img>
                     </a>
 
                     <a href="https://there-be-games.netlify.app/" target="_blank" className="blacks-container" id="TBG" rel="noreferrer">
                         <div className="description-pointer">?</div>
-                        <span className="black-to-white-description">There'll be Games:<br></br>'a more complex ReactJS & API project about video games'</span>
+                        <span className="black-to-white-description">
+                            <strong>
+                                There'll be Games:
+                            </strong>
+                            <br />
+                            'a more complex ReactJS & API project about video games'
+                        </span>
                         <img src={require("./images/TBG.png")} alt="coming soon" id="img-TBA"></img>
                     </a>
+
                     <a href="https://shelf-tec.netlify.app/" target="_blank" className="white-container" id="Shelf-Tec" rel="noreferrer">
                         <div className="description-pointer">?</div>
-                        <span className="white-to-black-description">Shelf-Tec Store:<br></br>still in working state! <br/>'a fullstack project with ReactJS, ReactRouter and Express'</span>
+                        <span className="white-to-black-description">
+                            <strong>
+                                Shelf-Tec Store:
+                            </strong>
+                            <br />
+                            still in working state!
+                            <br />
+                            'a fullstack project with ReactJS, ReactRouter and Express'
+                        </span>
                         <img src={require("./images/shelftec.JPG")} alt="coming soon" id="img-TBA"></img>
                     </a>
                 </div>
@@ -68,7 +109,6 @@ export default function Content() {
 
             <div className="contact container">
                 <Link to="/contact" className="contact-title">click here to get to my contact form</Link>
-
             </div>
         </div>
     )

@@ -173,8 +173,8 @@ a:hover {
     counter-reset: none;
     border-radius: 15px;
     position: absolute;
-    top: 25px;
-    left: 40px;
+    top: 15px;
+    left: 15px;
     text-align: center;
     display: flex;
     align-items: center;
@@ -186,7 +186,7 @@ a:hover {
 
 .black-to-white-description {
     position: absolute;
-    top: 30px;
+    top: 40px;
     color: white;
     font-size: 20px;
     font-weight: 500;
@@ -204,7 +204,7 @@ img {
 
 .white-to-black-description {
     position: absolute;
-    top: 30px;
+    top: 40px;
     color: black;
     font-size: 20px;
     font-weight: 500;
