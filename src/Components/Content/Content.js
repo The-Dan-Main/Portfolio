@@ -52,6 +52,11 @@ export default function Content() {
                         <span className="black-to-white-description">There'll be Games:<br></br>'a more complex ReactJS & API project about video games'</span>
                         <img src={require("./images/TBG.png")} alt="coming soon" id="img-TBA"></img>
                     </a>
+                    <a href="https://shelf-tec.netlify.app/" target="_blank" className="white-container" id="Shelf-Tec" rel="noreferrer">
+                        <div className="description-pointer">?</div>
+                        <span className="white-to-black-description">Shelf-Tec Store:<br></br>still in working state! <br/>'a fullstack project with ReactJS, ReactRouter and Express'</span>
+                        <img src={require("./images/shelftec.JPG")} alt="coming soon" id="img-TBA"></img>
+                    </a>
                 </div>
             </div>
 
