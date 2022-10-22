@@ -1,0 +1,29 @@
+.Landing-container {
+    margin: 80px;
+    border: solid #fff 2px;
+    height: 80vh;
+    box-shadow: 0 0 20px 0 #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: containerShape 10s ease-out;
+}
+
+
+
+@keyframes startUp {
+    from {font-size: 0px;}
+    to {font-size: 200px;}
+}
+
+@keyframes containerShape {
+    from {border-radius: 50%;}
+    to {border-radius: 0px;}
+}
+
+
+.Landing-container h1 {
+    border: none;
+    animation: startUp 10s ease-out ;
+    font-size: 200px;
+}

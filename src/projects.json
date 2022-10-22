@@ -1,0 +1,133 @@
+[
+    {
+        "projects": [
+            {
+                "id": "001",
+                "status": "working-state",
+                "published": "May 16, 2022",
+                "title": "Calculator",
+                "short-description": "A simple calculator, which I built from scratch",
+                "technologies": [
+                    "HTML",
+                    "CSS",
+                    "Javascript"
+                ],
+                "learned-during": "Javascript Eval function, click events and DOM-Manipulation",
+                "challenges": "",
+                "inspiration": "after learning HTML, CSS and JS, i wanted to build my first web-app from scratch. My focus should be on the calculation function and to display the output on to the DOM.",
+                "link": "https://mysimple-calculator.netlify.app/",
+                "main-image": "./images/calculator.png",
+                "second-image": "./images/calculator.png",
+                "github": "https://github.com/The-Dan-Main/calculator"
+            },
+            {
+                "id": "002",
+                "status": "working-state",
+                "published": "Jun 28, 2022",
+                "title": "Todoay",
+                "short-description": "get it done Today! - ToDo List",
+                "technologies": [
+                    "HTML",
+                    "CSS",
+                    "Javascript"
+                ],
+                "learned-during": "creating DOM elemtents and adding them to the page, simple web-navigation and displaying date & time",
+                "challenges": "working with arrays and filtering data",
+                "inspiration": "as i worked a lot during my studies and work life with a variety of to-do lists, i wanted to create a multi-page web-app, with task that can be added, updated and finished",
+                "link": "https://todoay-list.netlify.app",
+                "main-image": "./images/Todo list.png",
+                "second-image": "./images/Todo list.png",
+                "github": "https://github.com/The-Dan-Main/toDoList"
+            },
+            {
+                "id": "003",
+                "status": "working-state",
+                "published": "Aug 16, 2022",
+                "title": "Quotes",
+                "short-description": "a quote generator with style settings",
+                "technologies": [
+                    "HTML",
+                    "CSS",
+                    "Javascript",
+                    "API - Rest client"
+                ],
+                "learned-during": "CSS manipulation through JS, moving elements and using of an API",
+                "challenges": "Font change on selection, resetting styles and displaying API response content",
+                "inspiration": "This project was a group project from Mimo Dev. Our user story was to integrate an API call and display the data response, everything else was up to us. I decided to keep the focus on changeable styling and to integrate pagination in our API call, to access all of the 50'000+ quotes, which are available.",
+                "link": "https://quote-generator-c9.netlify.app/",
+                "main-image": "./images/quoteGenerator.png",
+                "second-image": "./images/quoteGenerator.png",
+                "github": "https://github.com/The-Dan-Main/Cohort_9-Quote-Project-1"
+            },
+            {
+                "id": "004",
+                "status": "working-state",
+                "published": "Aug 24, 2022",
+                "title": "Countries of the World",
+                "short-description": "a simple ReactJS API interface to get infos about countries",
+                "technologies": [
+                    "ReactJS",
+                    "HTML",
+                    "CSS",
+                    "Javascript",
+                    "API - Rest client"
+                ],
+                "learned-during": "storing data from API in state and deleting items after comparing data",
+                "challenges": "remodeling from functional to class react component, passing down data to child components and manipulating state from different component, but keeping one single source of state/truth",
+                "inspiration": "using this open API to showcase my learned react skills",
+                "link": "https://countries-of-the-world-dan.netlify.app",
+                "main-image": "./images/country.png",
+                "second-image": "./images/country.png",
+                "github": "https://github.com/The-Dan-Main/Country-Project"
+            },
+            {
+                "id": "005",
+                "status": "working-state",
+                "published": "Sep 13, 2022",
+                "title": "There'll be Games",
+                "short-description": "a more complex ReactJS & API project about video games",
+                "technologies": [
+                    "HTML",
+                    "CSS",
+                    "Javascript",
+                    "ReactJS",
+                    "API - Rest client",
+                    "React Router"
+                ],
+                "learned-during": "React router, navigation in react & navivation and working along the URL",
+                "challenges": "side-ways scrolling, dragging as scroll, navigation, manipulation different states and bringing data together from seperate API calls",
+                "inspiration": "Gaming was always a passion of mine and this small appreciation to video games is a way of combining two passions.",
+                "link": "https://there-be-games.netlify.app/",
+                "main-image": "./images/TBG.png",
+                "second-image": "./images/TBG.png",
+                "github": "https://github.com/The-Dan-Main/therebegames"
+            },
+            {
+                "id": "006",
+                "status": "ongoing",
+                "published": "ongoing project",
+                "title": "ShelfTec",
+                "short-description": "Onlineshop for tech products ",
+                "technologies": [
+                    "HTML",
+                    "CSS",
+                    "Javascript",
+                    "ReactJS",
+                    "React Router",
+                    "NodeJS",
+                    "ExpressJS",
+                    "MySQL",
+                    "Heroku"
+                ],
+                "learned-during": "Login authentification, building the back-end API for the products and publishing back-end",
+                "challenges": "Building a back-end from scratch and sharing data through api call on the backend",
+                "inspiration": "Since i earn my own money, i bought all my tech-stuff at 'Digitec.ch'. Their website and design was always giving me a 'home-like' feeling, which i wanted to achieve for project. At first i wanted to use a public API, but the range of product was not satisfying, so i had to build my own API for this.",
+                "link": "https://github.com/The-Dan-Main/fakestore-api",
+                "main-image": "./images/shelftec.JPG",
+                "second-image": "./images/shelftec.JPG",
+                "github": "https://github.com/The-Dan-Main/fakestore-api",
+                "back-end": "https://shelf-tec-store.herokuapp.com/products"
+            }
+        ]
+    }
+]
