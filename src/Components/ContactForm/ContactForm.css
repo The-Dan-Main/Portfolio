@@ -42,14 +42,6 @@
 }
 
 
-img {
-    size: 100px;
-    /* width: 80%; */
-    height: 70%;
-    /* border-radius: 25px; */
-
-}
-
 .contact-container {
     position: relative;
 }
@@ -59,7 +51,7 @@ img {
     flex-direction: column;
 }
 
-input,select,textarea {
+.contact-container input,select,textarea {
     min-height: 50px;
     min-width: 800px;
     max-width: max-content;
@@ -71,11 +63,11 @@ input,select,textarea {
     font-family: 'Yanone Kaffeesatz', sans-serif;
 }
 
-select {
+.contact-container select {
     min-width: 842px;
 }
 
-p {
+.contact-container p {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -90,7 +82,7 @@ p {
     margin-bottom: 100px;
 }
 
-button {
+.contact-container button {
     font-family: 'Yanone Kaffeesatz', sans-serif;
     font-size: 30px;
     padding: 10px;
@@ -104,11 +96,11 @@ button {
     margin-top: 100px;
 }
 
-select:-internal-list-box option:checked {
+.contact-container select:-internal-list-box option:checked {
     padding: 5px;
 
 }
-option {
+.contact-container option {
     padding: 10px;
     padding-top: 15px;
     border-radius: 5px;

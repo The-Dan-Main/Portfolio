@@ -8,7 +8,7 @@ export default function Landing() {
     const [round, setRound] = useState(0)
     const navigate = useNavigate()
 
-    const languages = ["Willkommen!", "¡Bienvenido/a!", "Bienvenue!", "Benvenuto/a!", "Bem-vindo/a!", "Välkommen!", "Hoş geldin!", "Witaj!", "Selamat datang!"]
+    const languages = ["Willkommen!", "¡Bienvenido/a!", "Bienvenue!", "Benvenuto/a!", "Bem-vindo/a!", "Välkommen!", "Hoş geldin!", "Witaj!", "Selamat datang!", "Willkommen!"]
 
     useEffect(() => {
         setTimeout(() => {

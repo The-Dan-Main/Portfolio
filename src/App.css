@@ -1,18 +1,15 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@200;300;400;500;600;700&display=swap');
 body {
-    background-color: black;
     color: white;
     font-family: 'Yanone Kaffeesatz', sans-serif;
-    font-size: 50px;
-    text-align: center;
-    font-weight: 700;
-
 }
 
-.giphy-embed {
-    border-radius: 30px;
-}
-.giphy-embed:hover {
-    pointer-events: none;
+.App {
+    background-color: #000;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    z-index: -2;
 }

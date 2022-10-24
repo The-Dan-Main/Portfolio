@@ -1,0 +1,22 @@
+.content-container {
+    margin: 5%;
+    border: solid #fff 4px;
+    height: 78vh;
+    box-shadow: 0 0 20px 0 #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    position: relative;
+}
+
+
+
+.Navbar-container {
+    position: absolute;
+    height: 10%;
+    top: 0;
+    width: 82vw;
+    border-bottom: 1px solid #fff;
+    background-color: #fff;
+}

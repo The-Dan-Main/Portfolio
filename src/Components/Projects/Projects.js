@@ -3,6 +3,8 @@ import projects from "../../projects.json"
 
 export default function Projects() {
 
+    const allProjects = projects[0].projects
+    
     return (
         <div className="Projects-container">
 

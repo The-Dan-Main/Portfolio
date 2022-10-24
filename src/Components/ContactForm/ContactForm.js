@@ -46,9 +46,9 @@ class ContactForm extends React.Component {
         const { name, email, message, type } = this.state;
         return (
             <div className='contact-container'>
-                <Link to="/" id="backToPortfolioContainer">
+                <Link to="/home" id="backToPortfolioContainer">
                     <h3 id="backToPortfolioTitle">Back to Portfolio</h3>
-                    <img src={require("../Content/images/—Pngtree—hand painted white arrows_6020093.png")} alt="back to Portfolio" id="backToPortfolio"></img>
+                    <img src={require("../../img/—Pngtree—hand painted white arrows_6020093.png")} alt="back to Portfolio" id="backToPortfolio"></img>
                 </Link>
                 <h3>I would love to build something for you!</h3>
                 <h3>Let me know what you need:</h3>
