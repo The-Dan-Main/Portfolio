@@ -103,7 +103,7 @@
 .PageLink-Container span::before {
     display: inline-block;
     content: attr(data-content);
-    color: #8eb8e9;
+    color: #b7e2ff;
     transform: translateX(100%);
     transition: transform 400ms ease-out;
     text-decoration: underline;

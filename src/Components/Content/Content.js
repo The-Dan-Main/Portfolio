@@ -6,19 +6,15 @@ import './Content.css'
 export default function Content() {
     const [isOpen, setIsOpen] = useState(0)
 
+    
+    
+    const toggleMenu = () => {
+        isOpen === 1 ? setIsOpen(0) : setIsOpen(1)
+    }
+    
     useEffect(() => {
         window.scrollTo(0, 0)
     }, [])
-
-
-    const toggleMenu = () => {
-        console.log("menu toggled")
-        // setIsOpen(1)
-        console.log(isOpen)
-        isOpen === 1 ? setIsOpen(0) : setIsOpen(1)
-        // isOpen === 1 ? setIsOpen(0) : setIsOpen(1)
-    }
-
     return (
         <div className="content-wrap">
             <div className="background">
