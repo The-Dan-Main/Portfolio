@@ -1,114 +1,69 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import Navbar from '../Navbar/Navbar'
 import './Content.css'
 
 export default function Content() {
+    const [isOpen, setIsOpen] = useState(0)
 
+    
+    
+    const toggleMenu = () => {
+        isOpen === 1 ? setIsOpen(0) : setIsOpen(1)
+    }
+    
     useEffect(() => {
         window.scrollTo(0, 0)
     }, [])
-
     return (
-        <div className='content-container'>
-            <div className="container container2">
-                <h1 id="heading">Welcome to my Portfolio</h1>
-                <h1 id="heading2">Thank you for checking out my projects and i wish you a lot of fun!<br></br>- Dan Weber</h1>
-                <h3 id="headingps">PS: Reach out to me for individual projects at the bottom, I'd love to build something for you!</h3>
+        <div className="content-wrap">
+            <div className="background">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
-            <h2 id="past-projects-header">Past Projects</h2>
-            <div className="container">
+            <div className='content-container'>
+                {isOpen === 1 && <Navbar />}
+                <label htmlFor="check" className='navbar-menu' >
+                    <input type="checkbox" id="check" onClick={()=>toggleMenu()}/>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
 
-
-                <a href="https://mysimple-calculator.netlify.app/" target="_blank" rel="noreferrer">
-                    <div className="description-pointer">?</div>
-                    <span className="black-to-white-description">
-                        <strong>
-                            First project:
-                        </strong>
-                        <br></br>
-                        'A simple calculator, which I built from scratch'
-                    </span>
-                    <img src={require("./images/calculator.png")} alt="my first project - a simple calculator" id="img-calculator"></img>
-                </a>
-                
-                <a href="https://todoay-list.netlify.app/" target="_blank" className="white-container" rel="noreferrer">
-                    <div className="description-pointer">?</div>
-                    <span className="white-to-black-description">
-                        <strong>
-                            Second project:
-                        </strong>
-                        <br></br>
-                        'A multi-page todo-list with filter functions'
-                    </span>
-                    <img src={require("./images/Todo list.png")} alt="my second project - a to do list" id="img-todolist"></img>
-                </a>
-
-                <a href="https://quote-generator-c9.netlify.app/" target="_blank" className="white-container" id="quote" rel="noreferrer">
-                    <div className="description-pointer">?</div>
-                    <span className="white-to-black-description">
-                        <strong>
-                            Second project:
-                        </strong>
-                        <br></br>
-                        'a quote generator with style settings'
-                    </span>
-                    <img src={require("./images/quoteGenerator.png")} alt="my third project - a quote generator" id="img-quote-generator"></img>
-                </a>
-
-            </div>
-            <h2>Current Projects</h2>
-            <div>
-                <h3 id="current-info">Still under constrution, so be careful...</h3>
-                <div className="container">
-
-                    <a href="https://countries-of-the-world-dan.netlify.app/" target="_blank" className="black-container" id="country" rel="noreferrer">
-                        <div className="description-pointer">?</div>
-                        <span className="black-to-white-description">
-                            <strong>
-                                Country Project:
-                            </strong>
-                            <br></br>
-                            'a simple ReactJS API interface to get infos about countries'
-                        </span>
-                        <img src={require("./images/country.png")} alt="coming soon" id="img-TBA"></img>
-                    </a>
-
-                    <a href="https://there-be-games.netlify.app/" target="_blank" className="blacks-container" id="TBG" rel="noreferrer">
-                        <div className="description-pointer">?</div>
-                        <span className="black-to-white-description">
-                            <strong>
-                                There'll be Games:
-                            </strong>
-                            <br />
-                            'a more complex ReactJS & API project about video games'
-                        </span>
-                        <img src={require("./images/TBG.png")} alt="coming soon" id="img-TBA"></img>
-                    </a>
-
-                    <a href="https://shelf-tec.netlify.app/" target="_blank" className="white-container" id="Shelf-Tec" rel="noreferrer">
-                        <div className="description-pointer">?</div>
-                        <span className="white-to-black-description">
-                            <strong>
-                                Shelf-Tec Store:
-                            </strong>
-                            <br />
-                            still in working state!
-                            <br />
-                            'a fullstack project with ReactJS, ReactRouter and Express'
-                        </span>
-                        <img src={require("./images/shelftec.JPG")} alt="coming soon" id="img-TBA"></img>
-                    </a>
+                <div className="content-introduction">
+                    <h2 className="content-intro-title">Dan Weber</h2>
+                    <h2 className="content-intro-position">Junior Front-End Developer</h2>
+                    <p className="content-intro-desc">
+                        Hello there! After an adventerous carreer in hospitality, I found a new and ravishing passion!
+                        I am a young developer from downtown Zurich, Switzerland and love to build front-end / fullstack projects.
+                    </p>
                 </div>
-            </div>
 
-            <h2>Future Projects</h2>
-            <div id="future-projects-container">
-                <h3 id="current-info">Well, we'll see what the future brings... but definitely more projects!</h3>
-            </div>
-            <h2>Contact me</h2>
 
-            <div className="contact container">
-                <Link to="/contact" className="contact-title">click here to get to my contact form</Link>
+                <div className="PageLink-Container">
+                    <Link to="/projects" className="content-PageLinks"><span data-content="PROJECTS" aria-hidden="true"></span>PROJECTS</Link>
+                    <Link to="/contact" className="content-PageLinks"><span data-content="CONTACT" aria-hidden="true"></span>CONTACT</Link>
+                    <Link to="/about" className="content-PageLinks"><span data-content="ABOUT" aria-hidden="true"></span>ABOUT</Link>
+                </div>
+
             </div>
         </div>
     )

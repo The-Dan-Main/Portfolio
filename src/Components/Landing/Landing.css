@@ -1,14 +1,14 @@
 .Landing-container {
-    margin: 80px;
-    border: solid #fff 2px;
-    height: 80vh;
+    background-color: #000;
+    margin: 5%;
+    border: solid #fff 4px;
+    height: 78vh;
     box-shadow: 0 0 20px 0 #fff;
     display: flex;
     align-items: center;
     justify-content: center;
-    animation: containerShape 10s ease-out;
+    animation: containerShape 6s ease-out;
 }
-
 
 
 @keyframes startUp {
@@ -24,6 +24,6 @@
 
 .Landing-container h1 {
     border: none;
-    animation: startUp 10s ease-out ;
+    animation: startUp 6s ease-out ;
     font-size: 200px;
 }
