@@ -1,19 +1,20 @@
 import React from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import Navbar from "../Navbar/Navbar";
 import "./ContactForm.css"
 
 
 class ContactForm extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { name: "", email: "", message: "", age: "", type: "Blog" };
+        this.state = { name: "", email: "", message: "", type: "Inital" };
     }
 
     componentDidMount() {
         window.scrollTo(0, 0)
         document.title = "Contact Form"
     }
-    
+
 
     encode = (data) => {
         return Object.keys(data)
@@ -23,7 +24,7 @@ class ContactForm extends React.Component {
 
     reset = (e) => {
         e.preventDefault()
-        this.setState({ name: "", email: "", message: "", age: "", type: "" })
+        this.setState({ name: "", email: "", message: "", type: "Inital" })
     }
 
     handleSubmit = e => {
@@ -46,24 +47,27 @@ class ContactForm extends React.Component {
         const { name, email, message, type } = this.state;
         return (
             <div className='contact-container'>
-                <Link to="/home" id="backToPortfolioContainer">
-                    <h3 id="backToPortfolioTitle">Back to Portfolio</h3>
-                    <img src={require("../../img/—Pngtree—hand painted white arrows_6020093.png")} alt="back to Portfolio" id="backToPortfolio"></img>
-                </Link>
-                <h3>I would love to build something for you!</h3>
-                <h3>Let me know what you need:</h3>
+                <Navbar isOpen={this.props.isOpen} setIsOpen={this.props.setIsOpen} toggleMenu={this.props.toggleMenu} />
+
+                <div className="contact-intro">
+                    <h3>I would love to build something for you!</h3>
+                    <h3>Let me know what you need:</h3>
+                </div>
+
+                <div className="contact-divider">
+                </div>
 
                 <form onSubmit={this.handleSubmit} className="form-container" >
                     <p>
                         <label>
                             Your Name:<br></br>
-                            <input type="text" name="name" value={name} onChange={this.handleChange} />
+                            <input type="text" name="name" value={name} onChange={this.handleChange} placeholder="type your name here..."/>
                         </label>
                     </p>
                     <p>
                         <label>
                             Your Email:<br></br>
-                            <input type="email" name="email" value={email} onChange={this.handleChange} />
+                            <input type="email" name="email" value={email} onChange={this.handleChange} placeholder="type your email here..." />
                         </label>
                     </p>
                     <p>
@@ -79,10 +83,10 @@ class ContactForm extends React.Component {
                     </p>
                     <p>
                         <label>Message:<br></br>
-                            <textarea name="message" value={message} onChange={this.handleChange} />
+                            <textarea name="message" value={message} onChange={this.handleChange} placeholder="tell me everything you want to share..." />
                         </label>
                     </p>
-                    <label id="ready-title">Ready to send?</label>
+                    {/* <label id="ready-title">Ready to send?</label> */}
                     <p id="button-section">
                         <button type="submit" >Send</button>
                         <button type="reset" onClick={this.reset}>Reset</button>
@@ -98,7 +102,7 @@ class ContactForm extends React.Component {
 export function ContactWithRouter(props) {
     document.title = "Contact Form"
     const navigate = useNavigate()
-    return (<ContactForm navigate={navigate} />)
+    return (<ContactForm navigate={navigate} isOpen={props.isOpen} setIsOpen={props.setIsOpen} toggleMenu={props.toggleMenu} />)
 }
 
 export default ContactForm
