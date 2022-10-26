@@ -1,13 +1,14 @@
 .Projects-container {
-    margin: 5%;
+    /* margin: 5%; */
     border: solid #fff 4px;
-    height: 78vh;
+    height: 80vh;
     box-shadow: 0 0 20px 0 #fff;
     display: flex;
     z-index: 2;
     position: relative;
     gap: 50px;
     align-items: center;
+    width: 80vw;
 }
 
 .projects-titles {
@@ -25,18 +26,26 @@
 }
 
 .display-container {
-    display: flex;
-    margin-top: 130px;
-    flex-direction: column;
-    flex-wrap: wrap;
     height: 70%;
     border-left: solid 3px #fff;
     border-right: solid 3px #fff;
     border-radius: 20px;
-    width: -moz-fit-content;
     width: 65%;
+    margin-top: 130px;
     position: inherit;
-    align-content: space-between
+}
+.display-wrap {
+    align-content: space-between;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 100%;
+    
+}
+
+.empty{
+    border: none;
 }
 
 .display-technology {

@@ -1,12 +1,13 @@
 import React from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import Navbar from "../Navbar/Navbar";
 import "./ContactForm.css"
 
 
 class ContactForm extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { name: "", email: "", message: "", age: "", type: "Blog" };
+        this.state = [{ name: "", email: "", message: "", age: "", type: "Blog" }];
     }
 
     componentDidMount() {
@@ -46,10 +47,8 @@ class ContactForm extends React.Component {
         const { name, email, message, type } = this.state;
         return (
             <div className='contact-container'>
-                <Link to="/home" id="backToPortfolioContainer">
-                    <h3 id="backToPortfolioTitle">Back to Portfolio</h3>
-                    <img src={require("../../img/—Pngtree—hand painted white arrows_6020093.png")} alt="back to Portfolio" id="backToPortfolio"></img>
-                </Link>
+                <Navbar isOpen={this.props.isOpen} setIsOpen={this.props.setIsOpen} toggleMenu={this.props.toggleMenu} />
+                
                 <h3>I would love to build something for you!</h3>
                 <h3>Let me know what you need:</h3>
 
@@ -82,7 +81,7 @@ class ContactForm extends React.Component {
                             <textarea name="message" value={message} onChange={this.handleChange} />
                         </label>
                     </p>
-                    <label id="ready-title">Ready to send?</label>
+                    {/* <label id="ready-title">Ready to send?</label> */}
                     <p id="button-section">
                         <button type="submit" >Send</button>
                         <button type="reset" onClick={this.reset}>Reset</button>

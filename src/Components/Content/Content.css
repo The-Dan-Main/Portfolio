@@ -1,44 +1,9 @@
-.content-wrap a {
-    /* text-decoration: none; */
-    color: white;
-}
-
-/* New Styles after reconstruction */
-.content-container {
-    margin: 5%;
-    border: solid #fff 4px;
-    height: 78vh;
-    box-shadow: 0 0 20px 0 #fff;
-    display: flex;
-    z-index: 2;
-    position: relative;
-    justify-content: center;
-    gap: 50px;
-    align-items: center;
-}
-
-
-
-.content-introduction {
-    font-size: 2vw;
-    display: flex;
-    flex-direction: column;
-    padding: 100px 30px;
-    width: 62%;
-
-}
-
-.content-introduction h2 {
-    margin: 10px;
-}
-
-
 /* Navbar-styling */
 .Navbar-container {
     position: absolute;
     height: 15%;
     top: 0;
-    width: 82vw;
+    width: 72vw;
     border-bottom: 2px solid #fff;
     border-radius: 30px;
     display: flex;
@@ -66,9 +31,46 @@
     padding: 0 35% 0 25%;
 }
 
-/* .content-PageLinks:hover {
-    color: rgb(135, 186, 216);
-} */
+.isNotOpen {
+    border: none;
+}
+
+
+/* New Styles after reconstruction */
+.content-container {
+    border: solid #fff 4px;
+    height: 80vh;
+    box-shadow: 0 0 20px 0 #fff;
+    display: flex;
+    z-index: 2;
+    position: relative;
+    justify-content: center;
+    gap: 50px;
+    align-items: center;
+    width: 80vw;
+}
+
+
+
+.content-introduction {
+    font-size: 2vw;
+    display: flex;
+    flex-direction: column;
+    padding: 100px 30px;
+    width: 62%;
+
+}
+
+.content-introduction h2 {
+    margin: 10px;
+}
+
+
+
+
+
+
+
 
 
 .PageLink-Container {

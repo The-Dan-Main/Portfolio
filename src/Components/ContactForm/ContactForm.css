@@ -1,36 +1,14 @@
-
-#backToPortfolio {
-    height: 150px;
-    transform: rotate(45deg);
-    /* position: relative; */
-    /* bottom: 10%; */
-    /* left: 15%; */
-    text-decoration: underline;
-    padding: 0;
-}
-#backToPortfolioTitle {
-    font-size: 50px;
-    text-align: center;
-    font-weight: 700;
-    margin: 10px 0 0 0;
-    
-}
-
-#backToPortfolioContainer {
-    border-right: solid white 5px;
-    border-bottom: solid white 5px;
-    border-left: solid white 2px;
-    border-top: solid white 2px;
-    border-radius: 20px;
-    position: absolute;
-    left: 10px;
-    top: 10px;
-    height: 260px;
-    width: 200px;
+.contact-container {
+    border: solid #fff 4px;
+    height: 80vh;
+    box-shadow: 0 0 20px 0 #fff;
     display: flex;
-    flex-direction: column;
-    gap: -10px;
-
+    z-index: 2;
+    position: relative;
+    justify-content: center;
+    gap: 50px;
+    align-items: center;
+    width: 80vw;
 }
 
 .contact-container h3 {
@@ -38,13 +16,11 @@
     font-size: 50px;
     font-weight: 700;
     text-align: center;
-    /* margin: 0; */
 }
 
 
-.contact-container {
-    position: relative;
-}
+
+
 
 .form-container {
     display: flex;
