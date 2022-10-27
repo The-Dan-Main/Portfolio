@@ -1,5 +1,4 @@
 .Landing-container {
-    /* margin: 5%; */
     border: solid #fff 4px;
     height: 80vh;
     box-shadow: 0 0 20px 0 #fff;
@@ -10,30 +9,35 @@
     width: 80vw;
 }
 
-
 @keyframes startUp {
-    from {font-size: 0px;}
-    to {font-size: 200px;}
+    from {font-size: 1vw;}
+    to {font-size: 18vw;}
 }
 
 @keyframes containerShape {
     from {
         border-radius: 50%;
         height: 0vh;
-        width: 80vh;
-
+        width: 0vw;
     }
     to {
-        border-radius: 0px;
+        border-radius: 0%;
         height: 80vh;
         width: 80vw;
-
     }
 }
-
 
 .Landing-container h1 {
     border: none;
     animation: startUp 6s ease-out ;
-    font-size: 200px;
+    font-size: 18vw;
+}
+
+
+
+/* responsive design changes */
+
+@media screen and (max-width: 1400px)  {
+    
+    
 }

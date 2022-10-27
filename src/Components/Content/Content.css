@@ -9,11 +9,11 @@
     display: flex;
     align-items: center;
     margin: 0 4.5% 0 4.5%;
-
+    gap: 10%;
 }
 
 .navbar-images {
-    height: 35px;
+    height: 5vh;
 }
 
 .navbar-icons {
@@ -27,14 +27,61 @@
     font-size: 5vh;
     display: flex;
     gap: 20px;
-    width: 80%;
-    padding: 0 35% 0 25%;
 }
 
 .isNotOpen {
     border: none;
 }
 
+/* burgermenu homepage */
+.navbar-menu {
+    display: flex;
+    flex-direction: column;
+    width: 4vw;
+    cursor: pointer;
+    position: absolute;
+    right: 3vw;
+}
+
+.navbar-menu span {
+    background: #fff;
+    border-radius: 10px;
+    height: 0.8vw;
+    margin: 10% 0;
+    transition: .4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+
+.navbar-menu span:nth-of-type(1) {
+    width: 50%;
+}
+
+.navbar-menu span:nth-of-type(2) {
+    width: 100%;
+}
+
+.navbar-menu span:nth-of-type(3) {
+    width: 75%;
+}
+
+.navbar-menu input[type="checkbox"] {
+    display: none;
+}
+
+.navbar-menu input[type="checkbox"]:checked~span:nth-of-type(1) {
+    transform-origin: bottom;
+    transform: rotatez(45deg) translate(25%, 25%)
+}
+
+.navbar-menu input[type="checkbox"]:checked~span:nth-of-type(2) {
+    transform-origin: top;
+    transform: rotatez(-45deg)
+}
+
+.navbar-menu input[type="checkbox"]:checked~span:nth-of-type(3) {
+    transform-origin: bottom;
+    width: 50%;
+    transform: translate(85%, -150%) rotatez(45deg);
+}
 
 /* New Styles after reconstruction */
 .content-container {
@@ -45,12 +92,10 @@
     z-index: 2;
     position: relative;
     justify-content: center;
-    gap: 50px;
+    gap: 10%;
     align-items: center;
     width: 80vw;
 }
-
-
 
 .content-introduction {
     font-size: 2vw;
@@ -58,25 +103,18 @@
     flex-direction: column;
     padding: 100px 30px;
     width: 62%;
+    margin: 10px;
 
 }
 
 .content-introduction h2 {
-    margin: 10px;
+    margin: 10px 0;
 }
-
-
-
-
-
-
-
-
 
 .PageLink-Container {
     display: flex;
     flex-direction: column;
-    font-size: 5em;
+    font-size: 5vw;
     gap: 30px;
     padding: 200px 30px;
 }
@@ -101,7 +139,6 @@
     transform: translateX(0);
 }
 
-
 .PageLink-Container span::before {
     display: inline-block;
     content: attr(data-content);
@@ -111,77 +148,9 @@
     text-decoration: underline;
 }
 
-
 .PageLink-Container a:hover span::before {
     transform: translateX(0);
 }
-
-
-/* burgermenu homepage */
-.navbar-menu {
-    display: flex;
-    flex-direction: column;
-    width: 70px;
-    cursor: pointer;
-    position: absolute;
-    top: 19px;
-    right: 114px;
-}
-
-.navbar-menu span {
-    background: #fff;
-    border-radius: 10px;
-    height: 7px;
-    margin: 7px 0;
-    transition: .4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
-
-}
-
-
-.navbar-menu span:nth-of-type(1) {
-    width: 50%;
-
-}
-
-.navbar-menu span:nth-of-type(2) {
-    width: 100%;
-}
-
-
-.navbar-menu span:nth-of-type(3) {
-    width: 75%;
-
-}
-
-
-.navbar-menu input[type="checkbox"] {
-    display: none;
-}
-
-
-.navbar-menu input[type="checkbox"]:checked~span:nth-of-type(1) {
-    transform-origin: bottom;
-    transform: rotatez(45deg) translate(8px, 0px)
-}
-
-
-.navbar-menu input[type="checkbox"]:checked~span:nth-of-type(2) {
-
-    transform-origin: top;
-    transform: rotatez(-45deg)
-}
-
-
-.navbar-menu input[type="checkbox"]:checked~span:nth-of-type(3) {
-
-    transform-origin: bottom;
-    width: 50%;
-    transform: translate(30px, -11px) rotatez(45deg);
-
-}
-
-
-
 
 
 
@@ -415,4 +384,68 @@
     animation-delay: -7s;
     transform-origin: 21vw 22vh;
     box-shadow: -2vmin 0 1.2405469390464778vmin currentColor;
+}
+
+/* responsive design changes */
+
+@media screen and (max-width: 1300px) {
+
+    .content-container {
+        flex-direction: column;
+    }
+
+    .content-introduction {
+        padding: 0;
+        width: 80%;
+        font-size: 3vw;
+    }
+
+    .PageLink-Container {
+        flex-direction: row;
+        padding: 0;
+        font-size: 6vw;
+    }
+
+    .Navbar-container {
+        gap: 0;
+    }
+}
+
+
+@media screen and (max-width: 1000px) {
+
+    .content-introduction {
+        font-size: 4vw;
+        padding-top: 10%;
+    }
+
+    .Navbar-container {
+        justify-content: center;
+        height: 10%;
+    }
+    
+    .navbar-icons {
+        display: none;
+    }
+    .navbar-links {
+        font-size: 4vw;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    .content-container {
+        gap: 5%;
+    }
+
+    .content-introduction {
+        width: 90%;
+        font-size: 5vw;
+    }
+
+    .PageLink-Container {
+        flex-direction: column;
+        font-size: 10vw;
+
+    }
 }

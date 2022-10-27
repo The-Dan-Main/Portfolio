@@ -1,5 +1,3 @@
-
-
 .About-container {
     /* margin: 5%; */
     border: solid #fff 4px;
@@ -12,4 +10,25 @@
     gap: 50px;
     align-items: center;
     width: 80vw;
+    font-size: 2vw;
+}
+
+@media screen and (max-width: 1000px) {
+
+    .About-container {
+        font-size: 3vw;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    .About-container {
+        font-size: 4vw;
+        display: flex;
+    }
+
+    .About-container h1 {
+        padding: 10%;
+        text-align: center;
+    }
 }
