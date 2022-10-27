@@ -8,7 +8,7 @@ export default function About(props) {
 
     useEffect(() => {
         setTimeout(() => {
-            // navigate("/home")
+            navigate("/home")
         }, 3000)
     })
 
