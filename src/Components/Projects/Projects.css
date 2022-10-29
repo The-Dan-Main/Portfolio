@@ -1,19 +1,18 @@
 .Projects-container {
-    /* margin: 5%; */
     border: solid #fff 4px;
     height: 80vh;
     box-shadow: 0 0 20px 0 #fff;
     display: flex;
     z-index: 2;
     position: relative;
-    gap: 50px;
+    gap: 2vw;
     align-items: center;
     width: 80vw;
     justify-content: center;
 }
 
 .projects-titles {
-    font-size: 3em;
+    font-size: 6vh;
     margin: 0;
     cursor: pointer;
 }
@@ -21,9 +20,8 @@
 .project-title-container {
     display: flex;
     flex-direction: column;
-    gap: 30px;
-    padding-top: 100px;
-    padding: 100px 0 0 50px;
+    gap: 3vh;
+    padding: 10% 0 0 5%;
 }
 
 .display-container {
@@ -45,7 +43,7 @@
     width: 100%;
 }
 
-.empty{
+.empty {
     border: none;
 }
 
@@ -55,15 +53,15 @@
 
 .Projects-container summary {
     font-weight: bold;
-    font-size: 2em;
+    font-size: 4vh;
 }
 
-.Projects-container details p{
-    font-size: 1.2em;
+.Projects-container details p {
+    font-size: 3vh;
 }
 
 .display-futherDes-container {
-    padding-top: 25px;
+    padding: 1vw 2vw 0 0;
     height: 80%;
     width: 45%;
     display: flex;
@@ -74,6 +72,7 @@
 .display-image {
     width: 500px;
 }
+
 .display-images-container {
     width: 500px;
 }
@@ -82,30 +81,34 @@
     position: absolute;
     bottom: 10px;
     display: flex;
-    gap: 200px;
+    gap: 5%;
     width: 100%;
-    font-size: 1.5em;
+    font-size: 3vh;
     justify-content: center;
 }
 
 .display-project-title {
-    font-size: 2.5em;
+    font-size: 6vh;
     margin: 10px 0;
 }
 
-.display-project-status span, .display-project-publish span, .display-project-shortDesc{
+.display-project-status span,
+.display-project-publish span,
+.display-project-shortDesc {
     text-decoration: underline;
     padding-right: 10px;
 }
 
-.display-introSection, .display-technologies {
-    padding-left: 50px;
+.display-introSection,
+.display-technologies {
+    padding-left: 2vw;
     width: 45%;
+    /* font-size: 3vh; */
 }
 
 .display-project-shortDesc {
-    font-size: 1.5em;
-    margin: 15px 0;
+    font-size: 3vh;
+    margin: 2% 0;
 }
 
 .display-tech-title {
@@ -113,11 +116,15 @@
     margin: 10px 0;
 }
 
-.display-introSection  h2,h3,p{
+.display-introSection h2,
+h3,
+p {
     margin: 10px 0;
 }
 
-
+.display-page-links-a {
+    width: 20%;
+}
 
 
 
@@ -151,7 +158,6 @@
     transform: translateX(0);
 }
 
-
 .project-title-container span::before {
     display: inline-block;
     content: attr(data-content);
@@ -161,7 +167,6 @@
     text-decoration: underline;
 }
 
-
 .project-title-container h3:hover span::before {
     transform: translateX(0);
 }
@@ -170,4 +175,202 @@
     /* display: inline-block; */
     color: #b7e2ff;
     text-decoration: underline;
+}
+
+
+/* responsive design changes */
+
+@media screen and (max-width: 1300px) and (orientation: landscape) {
+
+    .Projects-container {
+        gap: 0;
+        align-items: flex-end;
+    }
+
+    .project-title-container {
+        padding: 10% 0 0 2%;
+        gap: 3vh;
+        width: 30%;
+    }
+
+    .project-title-container,
+    .display-container {
+        margin-bottom: 1vh;
+    }
+
+    .projects-titles {
+        font-size: 6vh;
+    }
+
+    .Projects-container summary {
+        font-size: 3vh;
+    }
+
+    .Projects-container details p {
+        font-size: 2vh;
+    }
+
+    .display-page-links {
+        font-size: 2.5vh;
+    }
+
+    .display-project-title {
+        font-size: 5vh;
+    }
+
+    .display-introSection,
+    .display-technologies {
+        font-size: 2vh;
+    }
+
+    .display-project-shortDesc {
+        font-size: 2.5vh;
+    }
+}
+
+@media screen and (max-width: 1300px) and (orientation: portrait) {
+
+    .Projects-container {
+        gap: 2%;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+
+    .project-title-container {
+        padding: 10% 2% 0 2%;
+        gap: 2vw;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .display-container {
+        width: 90%;
+        margin: 0 0 5% 0;
+        height: 65%;
+    }
+
+    .projects-titles {
+        font-size: 4vh;
+        width: auto;
+    }
+
+    .Projects-container summary {
+        font-size: 3vh;
+    }
+
+    .Projects-container details p {
+        font-size: 2vh;
+    }
+
+    .display-page-links {
+        font-size: 2.5vh;
+    }
+
+    .display-project-title {
+        font-size: 4vh;
+    }
+
+    .display-introSection,
+    .display-technologies {
+        font-size: 1.5vh;
+    }
+
+    .display-project-shortDesc {
+        font-size: 2.5vh;
+    }
+}
+
+@media screen and (max-width: 500px) and (orientation: portrait) {
+
+    .project-title-container {
+        padding: 35% 2% 5% 2%;
+        gap: 2vw;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        height: auto;
+        margin: 4vh;
+    }
+    .display-container {
+        width: 90%;
+        margin: 0 0 5% 0;
+        height: 72%;
+        border-top: solid 3px #fff;
+        border-bottom: solid 3px #fff;
+        border-left: none;
+        border-right: none;
+    }
+    .display-wrap {
+        align-content: space-between;
+        display: flex;
+        flex-direction: column;
+        height: 80vh;
+        width: 100%;
+        gap: 2vh;
+        gap: 10hv;
+        flex-wrap: nowrap;
+    }
+    .display-futherDes-container {
+        padding: 1vw 2vw 0 0;
+        height: 30vh;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+    .display-page-links {
+        position: inherit;
+        bottom: 10px;
+        display: flex;
+        gap: 5%;
+        width: 100%;
+        font-size: 2.5vh;
+        justify-content: center;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+
+    .display-introSection, .display-technologies, .display-futherDes-container, .display-page-links {
+        width: 100%;
+        text-align: center;
+    }
+    .Projects-container {
+        height: auto;
+    }
+    .display-page-links-a {
+        width: 100%;
+        text-align: center;
+        padding: 2%;
+    }
+
+    .About-container, .contact-container, .Projects-container, .contact-container {
+        margin: 3vh;
+    }
+}
+
+
+
+
+
+
+/* landscape - rotate screen */
+@media screen and (max-width: 1000px) and (orientation: landscape) {
+    .About-container,
+    .content-container,
+    .contact-container,
+    .Projects-container {
+        visibility: hidden;
+        display: none;
+    }
+}
+
+@media screen and (max-width: 500px) and (orientation: landscape) {
+    .About-container,
+    .content-container,
+    .contact-container,
+    .Projects-container {
+        visibility: hidden;
+        display: none;
+    }
 }

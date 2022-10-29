@@ -1,8 +1,6 @@
 import { Link } from "react-router-dom"
 
 export default function Navbar(props) {
-    console.log(props.isOpen)
-
     const classes = props.isOpen ? "Navbar-container" : "Navbar-container isNotOpen"
 
     return (
