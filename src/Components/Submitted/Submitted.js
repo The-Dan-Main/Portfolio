@@ -24,7 +24,7 @@ export default function Submitted() {
 
     return (
             <div className="Submitted container">
-                <h1>Thank you for your inquiery and i will get back to you shortly!</h1>
+                <h1>Thank you for your inquiry and i will get back to you shortly!</h1>
                 <br></br>
                 <h1>Now let's bring you back in <span id='countdown'>{counter}</span></h1>
             </div>

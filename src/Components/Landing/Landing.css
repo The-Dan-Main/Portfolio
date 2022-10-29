@@ -7,6 +7,7 @@
     justify-content: center;
     animation: containerShape 6s ease-out;
     width: 80vw;
+    text-align: center;
 }
 
 @keyframes startUp {
@@ -31,6 +32,7 @@
     border: none;
     animation: startUp 6s ease-out ;
     font-size: 18vw;
+    text-align: center;
 }
 
 
