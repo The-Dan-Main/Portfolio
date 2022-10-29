@@ -61,18 +61,18 @@ class ContactForm extends React.Component {
                     <p>
                         <label>
                             Your Name:<br></br>
-                            <input type="text" name="name" value={name} onChange={this.handleChange} placeholder="type your name here..."/>
+                            <input type="text" required name="name" value={name} onChange={this.handleChange} placeholder="type your name here..."/>
                         </label>
                     </p>
                     <p>
                         <label>
                             Your Email:<br></br>
-                            <input type="email" name="email" value={email} onChange={this.handleChange} placeholder="type your email here..." />
+                            <input type="email" required name="email" value={email} onChange={this.handleChange} placeholder="type your email here..." />
                         </label>
                     </p>
                     <p>
                         <label>Type of Website:<br></br>
-                            <select name="type" onChange={this.handleChange} value={type}>
+                            <select name="type" required onChange={this.handleChange} value={type}>
                                 <option value="Inital">Please choose...</option>
                                 <option value="Blog">Blog</option>
                                 <option value="Info-Site">Info-Page</option>
@@ -83,7 +83,7 @@ class ContactForm extends React.Component {
                     </p>
                     <p>
                         <label>Message:<br></br>
-                            <textarea name="message" value={message} onChange={this.handleChange} placeholder="tell me everything you want to share..." />
+                            <textarea name="message" required value={message} onChange={this.handleChange} placeholder="tell me everything you want to share..." />
                         </label>
                     </p>
                     {/* <label id="ready-title">Ready to send?</label> */}

@@ -55,6 +55,9 @@ export default function App() {
             <Route path='/contact/submitted' element={<Submitted isOpen={isOpen} setIsOpen={setIsOpen} toggleMenu={toggleMenu} />} />
           </Routes>
         </BrowserRouter>
+        <div className="rotateScreen">
+          <img src={require("./img/smartphone.png")} alt="" />
+        </div>
       </div>
     </div>
   );

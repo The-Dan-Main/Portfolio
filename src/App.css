@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@200;300;400;500;600;700&display=swap');
+
 body {
     color: white;
     font-family: 'Yanone Kaffeesatz', sans-serif;
@@ -6,7 +7,8 @@ body {
 
 .App {
     background-color: #000;
-    height: 100vh;
+    height: fit-content;
+    min-height: 100vh;
     width: 100vw;
     position: absolute;
     top: 0;
@@ -20,12 +22,12 @@ body {
     color: #fff;
 }
 
-@media screen and (max-width: 1400px)  {
-    
-    
+.rotateScreen img{
+    filter: invert(100%);
+    z-index: 999;
+    height: 80vh;
+    width: auto;
+    display: none;
 }
 
-@media screen and (max-width: 1400px) and (orientation:portrait)  {
-   
-    
-}
+
