@@ -1,14 +1,14 @@
 import './About.css'
 import { useEffect } from 'react'
-import { useNavigate } from 'react-router-dom'
+// import { useNavigate } from 'react-router-dom'
 import Navbar from '../Navbar/Navbar'
 
 export default function About(props) {
-    const navigate = useNavigate()
+    // const navigate = useNavigate()
 
     useEffect(() => {
         setTimeout(() => {
-            navigate("/home")
+            // navigate("/home")
         }, 3000)
     })
 
@@ -17,9 +17,16 @@ export default function About(props) {
         <div className="About-container">
             <Navbar isOpen={props.isOpen} setIsOpen={props.setIsOpen} toggleMenu={props.toggleMenu} />
 
-            <h1>Not yet finished, should be done soon!</h1>
-            {/* <img src={require("../../img/1.png")} alt="cv" />
-            <img src={require("../../img/2.png")} alt="cv" /> */}
+            <id className="about-intro-container">
+
+            </id>
+            <div className="about-tech-container">
+
+            </div>
+            <div className="about-map-container">
+
+            </div>
+
 
         </div>
     )
