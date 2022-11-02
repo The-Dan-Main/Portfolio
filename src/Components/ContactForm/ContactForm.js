@@ -12,7 +12,7 @@ class ContactForm extends React.Component {
 
     componentDidMount() {
         window.scrollTo(0, 0)
-        document.title = "Contact Form"
+        document.title = "Dan's Portfolio - CONTACT"
     }
 
 

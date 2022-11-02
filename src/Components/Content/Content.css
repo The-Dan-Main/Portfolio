@@ -10,6 +10,7 @@
     align-items: center;
     margin: 0 4.5% 0 4.5%;
     gap: 10%;
+    z-index: 9999;
 }
 
 .navbar-images {

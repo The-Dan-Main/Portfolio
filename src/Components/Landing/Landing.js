@@ -11,6 +11,7 @@ export default function Landing() {
     const languages = ["Willkommen!", "¡Bienvenido/a!", "Bienvenue!", "Benvenuto/a!", "Bem-vindo/a!", "Välkommen!", "Hoş geldin!", "Witaj!", "Selamat datang!", "Willkommen!"]
 
     useEffect(() => {
+        document.title = "Dan's Portfolio - WELCOME"
         setTimeout(() => {
             if (round > 1) {
                 setTitle("Welcome!")

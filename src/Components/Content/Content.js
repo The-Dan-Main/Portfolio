@@ -7,7 +7,7 @@ export default function Content(props) {
 
     useEffect(() => {
         window.scrollTo(0, 0)
-        document.title = "Dan's Portfolio"
+        document.title = "Dan's Portfolio - HOME"
 
     }, [])
 

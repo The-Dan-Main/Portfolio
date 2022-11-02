@@ -6,13 +6,14 @@ import { useEffect, useState } from 'react'
 export default function Projects(props) {
     const [activeProject, setActiveProject] = useState("")
     const allProjects = projects[0].projects
-    
 
 
-    useEffect(()=>{
+
+    useEffect(() => {
+        document.title = "Dan's Portfolio - PROJECTS"
         setActiveProject(allProjects[0])
-          // eslint-disable-next-line react-hooks/exhaustive-deps
-    },[])
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [])
 
     const handleClickOnTitle = (id, title, e) => {
         setActiveProject(allProjects[id])
@@ -26,23 +27,14 @@ export default function Projects(props) {
     const handleOpenDetails = (e) => {
         const detailsElements = document.querySelectorAll("details")
         const clickedElement = e.target.parentElement
-        // console.log("clicked:", clickedElement)
-        // console.log("is open:", clickedElement.hasAttribute("open"))
-        // console.log("is details:", clickedElement.tagName.toLowerCase() === "details")
 
         if (clickedElement.tagName.toLowerCase() === "details" && !clickedElement.hasAttribute("open")) {
-            // console.log("opening this, but closing others")
             detailsElements.forEach((i) => i.removeAttribute("open"))
-            clickedElement.setAttribute("open")
             return
         }
 
         if (clickedElement.tagName.toLowerCase() === "details" && clickedElement.hasAttribute("open")) {
-            // console.log("closing this")
-            // detailsElements.forEach((i) => i.removeAttribute("open"))
             clickedElement.open = "false"
-
-            console.log("is open:", clickedElement.hasAttribute("open"))
             return
         }
         else {
@@ -90,17 +82,17 @@ export default function Projects(props) {
 
                         <div className="display-futherDes-container">
 
-                            <details onClick={(e) => handleOpenDetails(e)}>
+                            <details onClick={(e) => handleOpenDetails(e)} open={false}>
                                 <summary>What was my inspiration?</summary>
                                 <p className="display-project-inspiration">- {activeProject.inspiration}. </p>
 
                             </details>
-                            <details onClick={(e) => handleOpenDetails(e)}>
+                            <details onClick={(e) => handleOpenDetails(e)} open={false}>
                                 <summary>What I learned while building it?</summary>
                                 <p className="display-project-learnedDuring">- {activeProject.learnedDuring}. </p>
 
                             </details>
-                            <details onClick={(e) => handleOpenDetails(e)}>
+                            <details onClick={(e) => handleOpenDetails(e)} open={false}>
                                 <summary>What were my challenges?</summary>
                                 <p className="display-project-challenges">- {activeProject.challenges}. </p>
 
@@ -110,7 +102,8 @@ export default function Projects(props) {
                         <div className="display-page-links">
                             <a href={activeProject.pageLink} target="_blank" rel="noopener noreferrer" className='display-page-links-a'>Visit Website</a>
                             <a href={activeProject.github} target="_blank" rel="noopener noreferrer" className='display-page-links-a'>Visit Github repository</a>
-                            {activeProject?.backEnd && <a href={activeProject.backEnd} target="_blank" rel="noopener noreferrer" className='display-page-links-a'>Visit Heroku repository</a>}
+                            {activeProject?.backEnd &&
+                                <a href={activeProject.backEnd} target="_blank" rel="noopener noreferrer" className='display-page-links-a'>Visit Heroku repository</a>}
                         </div>
                     </div>
                 }

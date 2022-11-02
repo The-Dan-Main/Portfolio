@@ -13,10 +13,8 @@ export default function App() {
   const [isOpen, setIsOpen] = useState(0)
 
   const toggleMenu = (e) => {
-    // e.preventdefault();
     const container = e.target.parentElement.parentElement
     container.classList.toggle("isNotOpen")
-    console.log(container)
     isOpen === 1 ? setIsOpen(0) : setIsOpen(1)
 }
 
