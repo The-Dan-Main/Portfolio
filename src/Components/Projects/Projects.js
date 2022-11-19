@@ -11,7 +11,7 @@ export default function Projects(props) {
 
     useEffect(() => {
         document.title = "Dan's Portfolio - PROJECTS"
-        setActiveProject(allProjects[0])
+        setActiveProject(allProjects[5])
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 

@@ -19,7 +19,7 @@
 
 .project-title-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     gap: 3vh;
     padding: 10% 0 0 5%;
 }
@@ -49,6 +49,7 @@
 
 .display-technology {
     margin: 5px;
+    font-size: 1.6em;
 }
 
 .Projects-container summary {
